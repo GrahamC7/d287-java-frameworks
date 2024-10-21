@@ -24,6 +24,11 @@ B.  Create a README file that includes notes describing where in the code to fin
 
 C.  Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
 
+2. mainscreen.html, line 14, title change
+3. mainscreen.html, line 19, changed H1
+4. mainscreen.html, line 21, changed H2
+4. mainscreen.html, line 52, changed H2
+
 
 Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.
 
