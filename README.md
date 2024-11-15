@@ -29,11 +29,11 @@ C.  Customize the HTML user interface for your customer’s application. The use
 4. mainscreen.html, line 21, changed H2
 4. mainscreen.html, line 52, changed H2
 
-
-Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.
-
-
 D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
+
+5. about.html, created about.html in templates directory, added lines 1-46
+6. mainscreencontroller.java, added getmapping lines 55-57
+7. mainscreen.html, added link to get from mainscreen.html to about.html, line 22-24
 
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
