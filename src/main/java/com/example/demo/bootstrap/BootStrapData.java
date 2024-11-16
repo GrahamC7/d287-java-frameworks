@@ -52,13 +52,13 @@ public class BootStrapData implements CommandLineRunner {
         }
 
         InhousePart inHousePart2 = new InhousePart();
-        inHousePart1.setId(002);
-        inHousePart1.setName("Cat-Back Exhaust");
-        inHousePart1.setPrice(900.00);
-        inHousePart1.setInv(10);
-        inHousePart1.setMinInv(1);
-        inHousePart1.setMaxInv(20);
-        inHousePartRepository.save(inHousePart1);
+        inHousePart2.setId(002);
+        inHousePart2.setName("Cat-Back Exhaust");
+        inHousePart2.setPrice(900.00);
+        inHousePart2.setInv(10);
+        inHousePart2.setMinInv(1);
+        inHousePart2.setMaxInv(20);
+        inHousePartRepository.save(inHousePart2);
         thePart = null;
         inhouseParts = (List<InhousePart>) inHousePartRepository.findAll();
         for(InhousePart inhousePart : inhouseParts) {
