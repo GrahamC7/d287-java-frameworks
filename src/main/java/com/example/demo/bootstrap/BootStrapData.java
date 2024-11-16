@@ -1,21 +1,15 @@
 package com.example.demo.bootstrap;
 
+import com.example.demo.domain.InhousePart;
 import com.example.demo.domain.OutsourcedPart;
-import com.example.demo.domain.Part;
-import com.example.demo.domain.Product;
 import com.example.demo.repositories.InhousePartRepository;
 import com.example.demo.repositories.OutsourcedPartRepository;
 import com.example.demo.repositories.PartRepository;
 import com.example.demo.repositories.ProductRepository;
-import com.example.demo.service.OutsourcedPartService;
-import com.example.demo.service.OutsourcedPartServiceImpl;
-import com.example.demo.service.ProductService;
-import com.example.demo.service.ProductServiceImpl;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Optional;
 
 /**
  *
@@ -31,15 +25,47 @@ public class BootStrapData implements CommandLineRunner {
     private final InhousePartRepository inHousePartRepository;
     private final OutsourcedPartRepository outsourcedPartRepository;
 
-    public BootStrapData(PartRepository partRepository, ProductRepository productRepository, OutsourcedPartRepository outsourcedPartRepository) {
+    public BootStrapData(PartRepository partRepository, ProductRepository productRepository,InhousePartRepository inhousePartRepository,OutsourcedPartRepository outsourcedPartRepository) {
         this.partRepository = partRepository;
         this.productRepository = productRepository;
-        this.inHousePartRepository = inHousePartRepository;
+        this.inHousePartRepository = inhousePartRepository;
         this.outsourcedPartRepository=outsourcedPartRepository;
     }
 
     @Override
     public void run(String... args) throws Exception {
+
+        List<InhousePart> inhouseParts = (List<InhousePart>) inHousePartRepository.findAll();
+
+        InhousePart inHousePart1 = new InhousePart();
+        inHousePart1.setId(001);
+        inHousePart1.setName("Axle-Back Exhaust");
+        inHousePart1.setPrice(400.00);
+        inHousePart1.setInv(10);
+        inHousePart1.setMinInv(1);
+        inHousePart1.setMaxInv(20);
+        inHousePartRepository.save(inHousePart1);
+        InhousePart thePart = null;
+        inhouseParts = (List<InhousePart>) inHousePartRepository.findAll();
+        for(InhousePart inhousePart : inhouseParts) {
+            if(inhousePart.getName().equals("Axle-Back Exhaust")) {}
+        }
+
+        InhousePart inHousePart1 = new InhousePart();
+        inHousePart1.setId(002);
+        inHousePart1.setName("Cat-Back Exhaust");
+        inHousePart1.setPrice(900.00);
+        inHousePart1.setInv(10);
+        inHousePart1.setMinInv(1);
+        inHousePart1.setMaxInv(20);
+        inHousePartRepository.save(inHousePart1);
+        thePart = null;
+        inhouseParts = (List<InhousePart>) inHousePartRepository.findAll();
+        for(InhousePart inhousePart : inhouseParts) {
+            if(inhousePart.getName().equals("Cat-back Exhaust")) {}
+        }
+
+
 
        /*
         OutsourcedPart o= new OutsourcedPart();
