@@ -3,6 +3,7 @@ package com.example.demo.bootstrap;
 import com.example.demo.domain.OutsourcedPart;
 import com.example.demo.domain.Part;
 import com.example.demo.domain.Product;
+import com.example.demo.repositories.InhousePartRepository;
 import com.example.demo.repositories.OutsourcedPartRepository;
 import com.example.demo.repositories.PartRepository;
 import com.example.demo.repositories.ProductRepository;
@@ -27,12 +28,13 @@ public class BootStrapData implements CommandLineRunner {
 
     private final PartRepository partRepository;
     private final ProductRepository productRepository;
-
+    private final InhousePartRepository inHousePartRepository;
     private final OutsourcedPartRepository outsourcedPartRepository;
 
     public BootStrapData(PartRepository partRepository, ProductRepository productRepository, OutsourcedPartRepository outsourcedPartRepository) {
         this.partRepository = partRepository;
         this.productRepository = productRepository;
+        this.inHousePartRepository = inHousePartRepository;
         this.outsourcedPartRepository=outsourcedPartRepository;
     }
 
