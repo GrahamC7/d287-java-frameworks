@@ -65,6 +65,50 @@ public class BootStrapData implements CommandLineRunner {
             if(inhousePart.getName().equals("Cat-back Exhaust")) {}
         }
 
+        InhousePart inHousePart3 = new InhousePart();
+        inHousePart3.setId(003);
+        inHousePart3.setName("Longtube Headers");
+        inHousePart3.setPrice(600.00);
+        inHousePart3.setInv(10);
+        inHousePart3.setMinInv(1);
+        inHousePart3.setMaxInv(20);
+        inHousePartRepository.save(inHousePart3);
+        thePart = null;
+        inhouseParts = (List<InhousePart>) inHousePartRepository.findAll();
+        for(InhousePart inhousePart : inhouseParts) {
+            if(inhousePart.getName().equals("Longtube Headers")) {}
+        }
+
+        InhousePart inHousePart4 = new InhousePart();
+        inHousePart4.setId(004);
+        inHousePart4.setName("X-Pipe");
+        inHousePart4.setPrice(300.00);
+        inHousePart4.setInv(10);
+        inHousePart4.setMinInv(1);
+        inHousePart4.setMaxInv(20);
+        inHousePartRepository.save(inHousePart4);
+        thePart = null;
+        inhouseParts = (List<InhousePart>) inHousePartRepository.findAll();
+        for(InhousePart inhousePart : inhouseParts) {
+            if(inhousePart.getName().equals("X-Pipe")) {}
+        }
+
+        InhousePart inHousePart5 = new InhousePart();
+        inHousePart5.setId(005);
+        inHousePart5.setName("High Flow Cats");
+        inHousePart5.setPrice(300.00);
+        inHousePart5.setInv(10);
+        inHousePart5.setMinInv(1);
+        inHousePart5.setMaxInv(20);
+        inHousePartRepository.save(inHousePart5);
+        thePart = null;
+        inhouseParts = (List<InhousePart>) inHousePartRepository.findAll();
+        for(InhousePart inhousePart : inhouseParts) {
+            if(inhousePart.getName().equals("High Flow Cats")) {}
+        }
+
+
+
 
 
        /*
