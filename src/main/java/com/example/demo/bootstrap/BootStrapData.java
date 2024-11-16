@@ -93,23 +93,24 @@ public class BootStrapData implements CommandLineRunner {
             if(inhousePart.getName().equals("X-Pipe")) {}
         }
 
-        InhousePart inHousePart5 = new InhousePart();
-        inHousePart5.setId(005);
-        inHousePart5.setName("High Flow Cats");
-        inHousePart5.setPrice(300.00);
-        inHousePart5.setInv(10);
-        inHousePart5.setMinInv(1);
-        inHousePart5.setMaxInv(20);
-        inHousePartRepository.save(inHousePart5);
-        thePart = null;
-        inhouseParts = (List<InhousePart>) inHousePartRepository.findAll();
-        for(InhousePart inhousePart : inhouseParts) {
-            if(inhousePart.getName().equals("High Flow Cats")) {}
+        List<OutsourcedPart> outsourcedParts = (List<OutsourcedPart>) outsourcedPartRepository.findAll();
+
+        OutsourcedPart outsourcedPart1 = new OutsourcedPart();
+        outsourcedPart1.setCompanyName("Summit Racing");
+        outsourcedPart1.setId(005);
+        outsourcedPart1.setName("High Flow Catalytic Converters");
+        outsourcedPart1.setPrice(300.00);
+        outsourcedPart1.setInv(10);
+        outsourcedPart1.setMinInv(1);
+        outsourcedPart1.setMaxInv(20);
+        outsourcedPartRepository.save(outsourcedPart1);
+        OutsourcedPart theOutsourcedPart = null;
+        outsourcedParts = (List<OutsourcedPart>) outsourcedPartRepository.findAll();
+        for(OutsourcedPart outsourcedPart : outsourcedParts) {
+            if(outsourcedPart.getName().equals("High Flow Catalytic Converters")) {
+                theOutsourcedPart = outsourcedPart;
+            }
         }
-
-
-
-
 
        /*
         OutsourcedPart o= new OutsourcedPart();
