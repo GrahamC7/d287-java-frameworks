@@ -2,6 +2,7 @@ package com.example.demo.bootstrap;
 
 import com.example.demo.domain.InhousePart;
 import com.example.demo.domain.OutsourcedPart;
+import com.example.demo.domain.Product;
 import com.example.demo.repositories.InhousePartRepository;
 import com.example.demo.repositories.OutsourcedPartRepository;
 import com.example.demo.repositories.PartRepository;
@@ -112,6 +113,9 @@ public class BootStrapData implements CommandLineRunner {
             }
         }
 
+        System.out.println(theOutsourcedPart.getCompanyName());
+
+
        /*
         OutsourcedPart o= new OutsourcedPart();
         o.setCompanyName("Western Governors University");
@@ -128,6 +132,7 @@ public class BootStrapData implements CommandLineRunner {
 
         System.out.println(thePart.getCompanyName());
         */
+
         List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
         for(OutsourcedPart part:outsourcedParts){
             System.out.println(part.getName()+" "+part.getCompanyName());
@@ -139,6 +144,18 @@ public class BootStrapData implements CommandLineRunner {
         productRepository.save(bicycle);
         productRepository.save(unicycle);
         */
+
+        Product headers_cats_xpipe_catback = new Product("Long Tube Headers, X-pipe, Cats, Catback",2000.0,10);
+        Product headers_cats = new Product("Long Tube Headers and High Flow Cats",950.0,10);
+        Product cats_catback = new Product("High Flow Cats and Cat-back",1100.0,10);
+        Product cats_axleback = new Product("High Flow Cats and Axle-back",550.0,10);
+        Product xpipe_catback = new Product("X-Pipe and Cat-back",1100.0,10);
+
+        productRepository.save(headers_cats_xpipe_catback);
+        productRepository.save(headers_cats);
+        productRepository.save(cats_catback);
+        productRepository.save(cats_axleback);
+        productRepository.save(xpipe_catback);
 
         System.out.println("Started in Bootstrap");
         System.out.println("Number of Products"+productRepository.count());
