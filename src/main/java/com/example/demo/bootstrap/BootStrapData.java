@@ -94,6 +94,11 @@ public class BootStrapData implements CommandLineRunner {
             if(inhousePart.getName().equals("X-Pipe")) {}
         }
 
+        inhouseParts = (List<InhousePart>) inHousePartRepository.findAll();
+        for(InhousePart inhousePart : inhouseParts) {
+            System.out.println(inhousePart.getName()+" "+inhousePart.getId());
+        }
+
         List<OutsourcedPart> outsourcedParts = (List<OutsourcedPart>) outsourcedPartRepository.findAll();
 
         OutsourcedPart outsourcedPart1 = new OutsourcedPart();
