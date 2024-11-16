@@ -51,7 +51,7 @@ public class BootStrapData implements CommandLineRunner {
             if(inhousePart.getName().equals("Axle-Back Exhaust")) {}
         }
 
-        InhousePart inHousePart1 = new InhousePart();
+        InhousePart inHousePart2 = new InhousePart();
         inHousePart1.setId(002);
         inHousePart1.setName("Cat-Back Exhaust");
         inHousePart1.setPrice(900.00);
