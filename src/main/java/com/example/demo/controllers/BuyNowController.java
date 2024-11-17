@@ -47,4 +47,5 @@ public class BuyNowController {
             return "/purchaseFailure"; // purchase failure due to product not found in inventory
         }
     }
+
 }
