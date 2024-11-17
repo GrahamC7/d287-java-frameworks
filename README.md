@@ -52,6 +52,9 @@ F.  Add a “Buy Now” button to your product list. Your “Buy Now” button m
 •  Display a message that indicates the success or failure of a purchase.
 
 11. mainscreen.html, added Buy Now button, line 91 next to buttons that delete and update products
+12. creation of BuyNowController.java file, file checks to see whether or not the product the customer wants to buy is in stock or not. If it is in stock it will produce a confirmation of the purchase. If it isn't in stock, a purchase failure will be produced. If the product isn't found, an error will be produced. Controller decrements the inventory by one upon a successful purchase.
+13. creation of purchaseSuccess.html file, file produces for a successful purchase notification for the customer
+14. creation of purchaseFailure.html file, file produces a failed purchase notification for the customer
 
 
 G.  Modify the parts to track maximum and minimum inventory by doing the following:
