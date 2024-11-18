@@ -151,11 +151,11 @@ public class BootStrapData implements CommandLineRunner {
         */
 
         // product packages
-        Product fullexhaust = new Product("Full Exhaust Package",2000.0,10);
-        Product catsToTips = new Product("Cats to Tips Package",1250.0,10);
-        Product xpipeToTips = new Product("X-pipe to Tips",1100.0,10);
-        Product freeFlow = new Product("Free Flow - Emissions Friendly Package",550.0,10);
-        Product offRoadFreeFlow = new Product("Free Flow - Offroad Package ",550.0,10);
+        Product fullexhaust = new Product("Full Exhaust Package",2100.0,20);
+        Product catsToTips = new Product("Cats to Tips Package",1500.0,20);
+        Product xpipeToTips = new Product("X-pipe to Tips",1200.0,20);
+        Product freeFlow = new Product("Free Flow - Emissions Friendly Package",550.0,20);
+        Product offRoadFreeFlow = new Product("Free Flow - Offroad Package ",1800.0,20);
 
         productRepository.save(fullexhaust);
         productRepository.save(catsToTips);
