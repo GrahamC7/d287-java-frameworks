@@ -76,6 +76,8 @@ G.  Modify the parts to track maximum and minimum inventory by doing the followi
 24. PartServiceImpl.java, added code to call inventoryVerification method, line 59
 25. InhousePartServiceImpl.java, added code to call inventoryVerification method, line 54
 26. OutsourcedPartServiceImpl.java, added code to call inventoryVerification method, line 52
+27. Mainscreen.html, added minimum and maximum inventory table headers, lines 44-45
+28. Mainscreen.html, added table data for min and max inventory, lines 54-55
 
 H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
 •  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.

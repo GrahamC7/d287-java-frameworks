@@ -126,10 +126,10 @@ public abstract class Part implements Serializable {
 
     public void inventoryVerification() {
         if (this.inv < this.minInv) {
-            throw new RuntimeException("Inventory value is below the minimum requirement.")
+            throw new RuntimeException("Inventory value is below the minimum requirement.");
         }
         else if (this.inv > this.maxInv) {
-            throw new RuntimeException("Inventory value is above the maximum allowable.")
+            throw new RuntimeException("Inventory value is above the maximum allowable.");
         }
     }
 
