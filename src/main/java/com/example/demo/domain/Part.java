@@ -3,6 +3,7 @@ package com.example.demo.domain;
 import com.example.demo.validators.ValidDeletePart;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -48,14 +49,17 @@ public abstract class Part implements Serializable {
         this.name = name;
         this.price = price;
         this.inv = inv;
+        this.minInv = 0; // default is 0
+        this.maxInv = 0; // default is 100
     }
 
-    public Part(String name, double price, int inv) {
+    public Part(long id, String name, double price, int inv, int minInv, int maxInv) {
+        this.id = id;
         this.name = name;
         this.price = price;
         this.inv = inv;
-        this.minInv = 0; // default is 0
-        this.maxInv = 0; // default is 100
+        this.minInv = minInv; // default is 0
+        this.maxInv = maxInv; // default is 100
     }
 
     public long getId() {
