@@ -69,8 +69,9 @@ G.  Modify the parts to track maximum and minimum inventory by doing the followi
 17. Part.java, added getter and setter methods for minInv and maxInd, lines 114-117
 18. InhousePart.java, added min and max values, lines 18-19
 19. OutsourcedPart.java, added min and max values, lines 18-19
-20. InhousePartForm.html, added entry fields for min and max user input
-21. OutsourcedPartForm.html, added entry fields for min and max user input
+20. InhousePartForm.html, added entry fields for min and max user input, lines 26-30
+21. OutsourcedPartForm.html, added entry fields for min and max user input, lines 27-31
+22. application.properties, changed persistent database file name, line 6
 
 
 H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
