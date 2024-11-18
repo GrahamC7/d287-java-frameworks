@@ -102,9 +102,18 @@ public abstract class Part implements Serializable {
         this.products = products;
     }
 
+    public int getMinInv() {return minInv;}
+
+    public void setMinInv(int minInv) {this.minInv = minInv;}
+
+    public int getMaxInv() {return maxInv;}
+
+    public void setMaxInv(int maxInv) {this.maxInv = maxInv;}
+
     public String toString(){
         return this.name;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -115,10 +124,15 @@ public abstract class Part implements Serializable {
         return id == part.id;
     }
 
-    public int getMinInv() {return minInv;}
-    public void setMinInv(int minInv) {this.minInv = minInv;}
-    public int getMaxInv() {return maxInv;}
-    public void setMaxInv(int maxInv) {this.maxInv = maxInv;}
+    public void inventoryVerification() {
+        if (this.inv < this.minInv) {
+            throw new RuntimeException("Inventory value is below the minimum requirement.")
+        }
+        else if (this.inv > this.maxInv) {
+            throw new RuntimeException("Inventory value is above the maximum allowable.")
+        }
+    }
+
 
     @Override
     public int hashCode() {
