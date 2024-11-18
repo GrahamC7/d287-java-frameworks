@@ -86,6 +86,7 @@ H.  Add validation for between or at the maximum and minimum fields. The validat
 •  Display error messages when adding and updating parts if the inventory is greater than the maximum.
 
 30. Created files ValidMinimumProduct.java, MinimumProductValidator.java, and all code contained. Will display error message when product quantity falls below set minimum quantity.
+31. Part.java, added ValidMinimumProduct validator, lines 4 and 21
 
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
