@@ -111,6 +111,11 @@ public abstract class Part implements Serializable {
         return id == part.id;
     }
 
+    public int getMinInv() {return minInv;}
+    public void setMinInv(int minInv) {this.minInv = minInv;}
+    public int getMaxInv() {return maxInv;}
+    public void setMaxInv(int maxInv) {this.maxInv = maxInv;}
+
     @Override
     public int hashCode() {
         return (int) (id ^ (id >>> 32));
