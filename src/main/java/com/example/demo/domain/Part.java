@@ -37,6 +37,13 @@ public abstract class Part implements Serializable {
     public Part() {
     }
 
+    @Min(value = 0, message = "Minimum inventory must be a positive value.")
+    int minInv;
+
+    @Min(value = 0, message = "Maximum inventory must be a positive value.")
+    @Max(value = 100, message = "Maximum inventory must not exceed set maximum value.")
+    int maxInv;
+
     public Part(String name, double price, int inv) {
         this.name = name;
         this.price = price;
