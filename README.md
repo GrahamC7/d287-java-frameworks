@@ -64,6 +64,12 @@ G.  Modify the parts to track maximum and minimum inventory by doing the followi
 •  Rename the file the persistent storage is saved to.
 •  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
 
+15. Part.java, inserted variables minInv and maxInv to part entity, lines 40-45
+16. Part.java, added min and max default values, lines 53-59
+17. Part.java, added getter and setter methods for minInv and maxInd, lines 114-117
+18. InhousePart.java, added min and max values, lines 18-19
+19. OutsourcedPart.java, added min and max values, lines 18-19
+
 
 H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
 •  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.

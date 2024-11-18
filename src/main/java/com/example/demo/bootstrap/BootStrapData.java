@@ -43,8 +43,8 @@ public class BootStrapData implements CommandLineRunner {
         inHousePart1.setName("Axle-Back Exhaust");
         inHousePart1.setPrice(400.00);
         inHousePart1.setInv(10);
-        // inHousePart1.setMinInv(1);
-        // inHousePart1.setMaxInv(20);
+        inHousePart1.setMinInv(1);
+        inHousePart1.setMaxInv(20);
         inHousePartRepository.save(inHousePart1);
         InhousePart thePart = null;
         inhouseParts = (List<InhousePart>) inHousePartRepository.findAll();
@@ -57,8 +57,8 @@ public class BootStrapData implements CommandLineRunner {
         inHousePart2.setName("Cat-Back Exhaust");
         inHousePart2.setPrice(900.00);
         inHousePart2.setInv(10);
-        //inHousePart2.setMinInv(1);
-        // inHousePart2.setMaxInv(20);
+        inHousePart2.setMinInv(1);
+        inHousePart2.setMaxInv(20);
         inHousePartRepository.save(inHousePart2);
         thePart = null;
         inhouseParts = (List<InhousePart>) inHousePartRepository.findAll();
@@ -71,8 +71,8 @@ public class BootStrapData implements CommandLineRunner {
         inHousePart3.setName("Longtube Headers");
         inHousePart3.setPrice(600.00);
         inHousePart3.setInv(10);
-        // inHousePart3.setMinInv(1);
-        // inHousePart3.setMaxInv(20);
+        inHousePart3.setMinInv(1);
+        inHousePart3.setMaxInv(20);
         inHousePartRepository.save(inHousePart3);
         thePart = null;
         inhouseParts = (List<InhousePart>) inHousePartRepository.findAll();
@@ -85,8 +85,8 @@ public class BootStrapData implements CommandLineRunner {
         inHousePart4.setName("X-Pipe");
         inHousePart4.setPrice(300.00);
         inHousePart4.setInv(10);
-        // inHousePart4.setMinInv(1);
-        // inHousePart4.setMaxInv(20);
+        inHousePart4.setMinInv(1);
+        inHousePart4.setMaxInv(20);
         inHousePartRepository.save(inHousePart4);
         thePart = null;
         inhouseParts = (List<InhousePart>) inHousePartRepository.findAll();
@@ -107,8 +107,8 @@ public class BootStrapData implements CommandLineRunner {
         outsourcedPart1.setName("High Flow Catalytic Converters");
         outsourcedPart1.setPrice(300.00);
         outsourcedPart1.setInv(10);
-        // outsourcedPart1.setMinInv(1);
-        // outsourcedPart1.setMaxInv(20);
+        outsourcedPart1.setMinInv(1);
+        outsourcedPart1.setMaxInv(20);
         outsourcedPartRepository.save(outsourcedPart1);
         OutsourcedPart theOutsourcedPart = null;
         outsourcedParts = (List<OutsourcedPart>) outsourcedPartRepository.findAll();
@@ -120,7 +120,6 @@ public class BootStrapData implements CommandLineRunner {
 
         // prints name of company where outsourced part is from
         System.out.println(theOutsourcedPart.getCompanyName());
-
 
        /*
         OutsourcedPart o= new OutsourcedPart();
