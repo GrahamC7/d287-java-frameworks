@@ -50,19 +50,12 @@ public abstract class Part implements Serializable {
         this.inv = inv;
     }
 
-    public Part(long id, String name, double price, int inv) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.inv = inv;
-    }
-
     public Part(String name, double price, int inv) {
         this.name = name;
         this.price = price;
         this.inv = inv;
-        this.minInv = 0; //default is 0
-        this.maxInv = 0; //default is 100
+        this.minInv = 0; // default is 0
+        this.maxInv = 0; // default is 100
     }
 
     public long getId() {
