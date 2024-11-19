@@ -93,9 +93,9 @@ H.  Add validation for between or at the maximum and minimum fields. The validat
 35. InhousePartForm.html, add code to display error message, lines 32-36
 36. OutsourcedPartForm.html, add code to display error message, lines 33-37
 
-
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 
+37. PartTest.java, created unit tests for the minimum and maximum fields in the test package, lines 160-195
 
 J.  Remove the class files for any unused validators in order to clean your code.
 
