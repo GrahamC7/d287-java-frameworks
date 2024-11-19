@@ -88,6 +88,7 @@ H.  Add validation for between or at the maximum and minimum fields. The validat
 30. Created files ValidMinimumProduct.java, MinimumProductValidator.java, and all code contained. Will display error message when product quantity falls below set minimum quantity.
 31. Part.java, added ValidMinimumProduct validator, lines 4 and 21
 32. EnufPartsValidator.java, checks for minimum value of parts when decrementing via part purchase and will provide an error message if inventory is not sufficient, lines 35-44
+33. Created files ValidMaximumProduct.java, MaximumProductValidator.java, and all code contained. Will display error message when product quantity exceeds maximum allowable quantity.
 
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
